@@ -2,33 +2,37 @@ package MathRelated;
 
 public class PowerOfSquares
 {
-    public int IntegerPower(int base, int power)
+    public double IntegerPower(int base, int power)
     {
 
         if(power == 0)
         return 1;
 
-        else
+
+         else if(power < 0) //unlucky this is not required scammed
         {
-            int count = 1;
-            int result = base;
-            while (count < power)
+            power = Math.abs(power);
+            double result = 1;
+             int count = 1;
+            while(count <= power)
             {
-                 result = result * base;
-		        count++;
+                result /= base;
+                count++;
             }
             return result;
         }
-        /* else //unlucky this is not required scammed
+        else
         {
-            int count = -power;
-            while(count <= power)
+            int count = 1;
+            double result = base;
+            while (count < power)
             {
-                base = base / base;
+                result = result * base;
+                count++;
             }
+            return result;
         }
 
-         */
     }
 
     public static void Square(int side , char c)
