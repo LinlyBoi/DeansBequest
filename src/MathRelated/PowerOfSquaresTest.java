@@ -10,11 +10,13 @@ public class PowerOfSquaresTest extends PowerOfSquares
     @Test
     public void integerPower()
     {
-        System.out.println(IntegerPower(2,-1));
+
         assertEquals(27,IntegerPower(3,3));
         assertEquals(4,IntegerPower(2,2));
         assertEquals(1,IntegerPower(2,0));
         assertEquals(0.5 , IntegerPower(2,-1));
+        assertEquals(1,IntegerPower(2,2)*IntegerPower(2,-2));
+        assertEquals(1,IntegerPower(10,10)*IntegerPower(10,-10),0.1);
 
     }
 

@@ -5,6 +5,7 @@ public class PowerOfSquares
     public double IntegerPower(int base, int power)
     {
 
+
         if(power == 0)
         return 1;
 
