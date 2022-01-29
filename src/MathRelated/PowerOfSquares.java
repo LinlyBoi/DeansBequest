@@ -10,12 +10,14 @@ public class PowerOfSquares
 
         else
         {
-            int count = 0;
-            while (count <= power)
+            int count = 1;
+            int result = base;
+            while (count < power)
             {
-                base = base * base;
+                 result = result * base;
+		        count++;
             }
-            return base;
+            return result;
         }
         /* else //unlucky this is not required scammed
         {
