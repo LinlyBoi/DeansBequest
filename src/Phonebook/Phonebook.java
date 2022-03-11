@@ -1,11 +1,12 @@
 package Phonebook;
 
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class Phonebook
 {
-    public Stack<PhoneNumber> Numbers = new Stack<PhoneNumber>();
+    public LinkedList<PhoneNumber> Numbers = new LinkedList<>();
 
     public boolean insert(String phoneNum, String name)
     {
@@ -26,6 +27,7 @@ public class Phonebook
         }
         PhoneNumber toInsert = new PhoneNumber(phoneNum, name);
         Numbers.push(toInsert);
+
         return true;
 
     }

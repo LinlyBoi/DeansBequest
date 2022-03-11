@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Stack;
 
 public class Coffee extends Batch {
+	
     String name;
     double price;
     int stock;

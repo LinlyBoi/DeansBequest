@@ -2,6 +2,7 @@ package IceCreamMachineStuff;
 
 public class IceCreamMachine
 {
+
     double Cream;
     double Sugar;
     double Icecream;
