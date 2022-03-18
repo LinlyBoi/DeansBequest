@@ -1,10 +1,10 @@
 package Stopwatch;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.*;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class StopWatchTest
 {

@@ -1,14 +1,16 @@
 package voltag;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Arrays;
 import java.util.Random;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class voltTest
 {
 
-    @org.junit.Test
+    @Test
     public void calc_mean()
     {
         Random r = new Random();
@@ -23,7 +25,7 @@ public class voltTest
 
 
 
-    @org.junit.Test
+    @Test
     public void report()
     {
         Random r = new Random();

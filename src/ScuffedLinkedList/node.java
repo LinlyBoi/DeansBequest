@@ -20,7 +20,9 @@ public class node
         this.data = data;
     }
     
-    public int getData()
+
+
+    public int getValue()
     {
         return data;
     }
