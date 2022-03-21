@@ -79,6 +79,7 @@ public class linkedlist
         target.next = inserted;
         inserted.prev = target;
         tail = inserted;
+        size++;
     }
 
     public void addFirst(int value)
@@ -89,6 +90,7 @@ public class linkedlist
         target.prev = inserted;
         inserted.next = target;
         head = inserted;
+        size++;
     }
 
 
