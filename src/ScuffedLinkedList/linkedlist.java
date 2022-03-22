@@ -8,6 +8,7 @@ public class linkedlist
 
     linkedlist()
     {
+        size = -1;
 
     }
 
@@ -16,6 +17,7 @@ public class linkedlist
         node inserted =new node(value);
         this.head = inserted;
         this.tail = inserted;
+        size = 0;
     }
 
 
@@ -40,7 +42,7 @@ public class linkedlist
         else if(index <= size/2 || size < 10)
         {
             node current = head;
-            for(int count = 0; count < index-2; count++)
+            for(int count = 0; count < index-1; count++)
                 current = current.next;
             return current;
         }

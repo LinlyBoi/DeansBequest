@@ -13,9 +13,10 @@ class linkedlistTest
         linkedlist L1 = new linkedlist(50);
 
         L1.add(49,0);
-        assertEquals(50, L1.getNode(1).getValue());
+        assertEquals(2,L1.size);
+        assertEquals(50, L1.getNode(2).getValue());
         L1.add(30,1);
-        assertEquals(30, L1.getNode(1).getValue());
+        assertEquals(30, L1.getNode(2).getValue());
     }
 
 
