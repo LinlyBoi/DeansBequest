@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
 public class StopWatch
 {
     private LocalTime startTime,endTime;
-    StopWatch()
+    public StopWatch()
     {
         startTime=LocalTime.of(0,0,0);
         endTime= LocalTime.of(0,0,0);

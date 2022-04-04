@@ -16,16 +16,16 @@ public class StopWatchTest
        StopWatch Watch2 = new StopWatch();
        StopWatch Watch3 = new StopWatch();
        StopWatch Watch4 = new StopWatch();
-        Watch1.start();
-        try
-        {
-            TimeUnit.MINUTES.sleep(1);
-        }
-        catch (InterruptedException e)
-        {
-            e.printStackTrace();
-        }
-        Watch1.stop();
+//        Watch1.start();
+//        try
+//        {
+//            TimeUnit.MINUTES.sleep(1);
+//        }
+//        catch (InterruptedException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        Watch1.stop();
 
         Watch2.start();
         TimeUnit.MILLISECONDS.sleep(69);
@@ -43,7 +43,7 @@ public class StopWatchTest
 
 
 
-        assertEquals(60000, Watch1.getElapsedTime(), 10);
+//        assertEquals(60000, Watch1.getElapsedTime(), 10);
         assertEquals(69, Watch2.getElapsedTime(),10);
         assertEquals(10, Watch3.getElapsedTime(),10);
         assertEquals(69, Watch4.getElapsedTime(),10);
