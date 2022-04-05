@@ -13,13 +13,20 @@ public class FindPathsMatrix
                     {6, 7, 8, 10},
                     {2, 5, 2, 8}
             };
-    GetPaths(M1);
+    GetPaths(M1,3);
   }
-  public static void GetPaths(int[][] M)
+  public static void GetPaths(int[][] M, int length)
   {
-    int[][] output = MultiplyMatrix(M,M);
-    assert output != null;
+    int count = 2;
+    int[][] output = M;
+    while(count <= length) {
+
+      output = MultiplyMatrix(output, M);
+      assert output != null;
+      count++;
+    }
     for (int[] ints : output) System.out.println(Arrays.toString(ints));
+
 
   }
 
