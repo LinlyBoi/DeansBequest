@@ -31,4 +31,37 @@ class linkedlistTest
        L2.delete(L2.size);
 
     }
+
+    @Test
+    void spin2()
+    {
+        linkedlist L1 = new linkedlist(50);
+        L1.add(49,1);
+        L1.add(48,1);
+        L1.add(47,1);
+        L1.add(46,1);
+        L1.add(45,1);
+        L1.add(44,1);
+        L1.add(43,1);
+        L1.add(42,1);
+        L1.add(41,1);
+        L1.add(40,1);
+        L1.add(39,1);
+        L1.add(38,1);
+        L1.add(37,1);
+        L1.spin2();
+
+    }
+    @Test
+    void backwards()
+    {
+        linkedlist L1 = new linkedlist(50);
+        L1.addLast(49);
+        L1.addLast(48);
+        L1.addLast(47);
+        L1.addLast(46);
+        L1.addLast(45);
+        L1.backwards();
+
+    }
 }
