@@ -23,6 +23,7 @@ public class RSA
     System.out.println("q must be prime!");
   }
 
+  //Get public keys 
   public double getYa()
   {
     return  Math.pow(alpha,Xa) % q; 
@@ -32,6 +33,8 @@ public class RSA
   {
     return  Math.pow(alpha,Xb) % q; 
   }
+
+  //Generate Key
   public double getKey()
   {
     double Kab,Kba;
