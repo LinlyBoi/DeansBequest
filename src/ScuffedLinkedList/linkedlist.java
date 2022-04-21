@@ -8,8 +8,7 @@ public class linkedlist
 
     linkedlist()
     {
-        size = -1;
-
+        size = 0;
     }
 
     linkedlist(int value)
@@ -17,7 +16,7 @@ public class linkedlist
         node inserted =new node(value);
         this.head = inserted;
         this.tail = inserted;
-        size = 0;
+        size = 1;
     }
 
 
@@ -27,19 +26,19 @@ public class linkedlist
         if(index == 0)
             return head;
 
-        else if(index == size)
+        else if(index == size-1)
             return tail;
 
 
-        else if(index > size/2 && size > 10)
+        else if(index > size/2)
         {
             node current = tail;
-            for(int count = size; count > index-2; count--)
+            for(int count = size-1; count > index; count--)
                 current = current.prev;
             return current;
         }
 
-        else if(index <= size/2 || size < 10)
+        else if(index <= size/2)
         {
             node current = head;
             for(int count = 0; count < index-1; count++)
@@ -117,4 +116,6 @@ public class linkedlist
         }
        size--;
     }
+    // Get factorial of number
+
 }

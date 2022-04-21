@@ -30,9 +30,6 @@ public class node
     @Override
     public String toString()
     {
-        return String.valueOf(this.data);
+        return Integer.toString(data);
     }
-    
-    
-
 }

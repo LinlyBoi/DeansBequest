@@ -62,6 +62,8 @@ public class AdvancedEncryption
         Assertions.assertEquals(input, plainText);
         long time = finish - start;
         System.out.println(time + " nanoseconds");
+        System.out.println(cipherText);
+        System.out.println(plainText);
     }
 
 }

@@ -36,7 +36,7 @@ class FindPathsMatrixTest
     }
 
     @Test
-    void rxC()
+    void RowMultiplyColumn()
     {
         int[][] M1 =
             {
