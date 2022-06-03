@@ -1,92 +1,79 @@
 package ScuffedLinkedList;
 
-public class linkedlist {
+public class linkedlist
+{
     public node head;
     public node tail;
     public int size;
 
-<<<<<<< HEAD
     linkedlist()
     {
         size = 0;
-=======
-    linkedlist() {
-        size = -1;
 
->>>>>>> aae40d7982df045ed4b77fc7a23e6e6ebb893eb7
     }
 
-    linkedlist(int value) {
+    linkedlist(int value)
+    {
         node inserted = new node(value);
         this.head = inserted;
         this.tail = inserted;
-<<<<<<< HEAD
-        size = 1;
-=======
         head.prev = tail;
         tail.next = head;
+        size = 1;
 
-        size = 0;
->>>>>>> aae40d7982df045ed4b77fc7a23e6e6ebb893eb7
     }
 
 
-    public node getNode(int index) {
+    public node getNode(int index)
+    {
 
-        if (index == 0)
-            return head;
+        if (index == 0) return head;
 
-<<<<<<< HEAD
-        else if(index == size-1)
-            return tail;
+        else if (index == size - 1) return tail;
 
 
-        else if(index > size/2)
+        else
         {
-            node current = tail;
-            for(int count = size-1; count > index; count--)
-                current = current.prev;
-            return current;
-        }
-
-        else if(index <= size/2)
-        {
-=======
-        else if (index == size)
-            return tail;
-
-
-         else
-         {
->>>>>>> aae40d7982df045ed4b77fc7a23e6e6ebb893eb7
             node current = head;
-            for (int count = 0; count < index-1; count++)
+            for (int i = 0; i < index; i++)
+            {
                 current = current.next;
+            }
             return current;
+
         }
     }
 
 
-    public void add(int value, int index) {
-        if (index == 0) {
+
+
+    public void add(int value, int index)
+    {
+        if (index == 0)
+        {
             addFirst(value);
-        } else if (index == size) {
+        } else if (index == size)
+        {
             addLast(value);
 
-        }
-        else {
+        } else
+        {
 
             node inserted = new node(value);
             node target = getNode(index);
+            target.prev.next = inserted;
+            inserted.prev = target.prev;
+            inserted.next = target;
+            target.prev = inserted;
 
-            inserted.next = target.next;
-            inserted.prev = target;
-            target.next = inserted;
+
+
+            size++;
         }
-        size++;
     }
 
-    public void addLast(int value) {
+    public void addLast(int value)
+    {
 
         node inserted = new node(value);
 
@@ -99,7 +86,8 @@ public class linkedlist {
         size++;
     }
 
-    public void addFirst(int value) {
+    public void addFirst(int value)
+    {
         node target = head;
         node inserted = new node(value);
 
@@ -113,20 +101,20 @@ public class linkedlist {
     }
 
 
-    public void delete(int index) {
+    public void delete(int index)
+    {
         node target = getNode(index);
         node prev, next;
 
         prev = target.prev;
         next = target.next;
 
-        if (prev == tail)
-            head = next;
+        if (prev == tail) head = next;
 
-        else if (next == head)
-            tail = prev;
+        else if (next == head) tail = prev;
 
-        else {
+        else
+        {
             prev.next = next;
             next.prev = prev;
         }
@@ -136,10 +124,10 @@ public class linkedlist {
     public void spin2()
     {
         int count = 0;
-        while(count != 2)
+        while (count != 2)
         {
             node temp = head;
-            while(temp.next != head)
+            while (temp.next != head)
             {
                 System.out.print(temp + " ");
                 temp = temp.next;
@@ -147,13 +135,14 @@ public class linkedlist {
             count++;
         }
     }
+
     public void backwards()
     {
         int count = 0;
-        while(count != 2)
+        while (count != 2)
         {
             node temp = tail;
-            while(temp.prev != tail)
+            while (temp.prev != tail)
             {
                 System.out.print(temp + " ");
                 temp = temp.prev;
